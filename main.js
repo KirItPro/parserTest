@@ -72,7 +72,6 @@ window.addEventListener('DOMContentLoaded', () => {
             btnAnotherFile.innerHTML = ADD_FILE_ANOTHER;
             parseDataBtn.classList.add('btn-active');
             selectFile(e.target.files?.[0]);
-            console.log(e.target.files?.[0].name);
         })
     };
 
