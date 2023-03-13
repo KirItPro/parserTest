@@ -48,6 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
             pushBlock.style.display = 'none';
             pushBlock.style.display = 'block';
             parseDataBtn.classList.add('btn-active');
+            mainBlock.classList.add('main-input_fullscreen');
             
             const file = e.dataTransfer?.files?.[0];
             inputText.hidden = true;
@@ -63,6 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
 
         inputFile.addEventListener('change', (e) => {
+            mainBlock.classList.add('main-input_fullscreen');
             titltFile.innerHTML = e.target.files?.[0].name;
             inputText.hidden = true;
             prevText.hidden = true;
@@ -83,6 +85,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function cancel() {
         cancelBtn.addEventListener('click', (e) => {
+            mainBlock.classList.remove('main-input_fullscreen');
             bufferBtn.hidden = false;
             cancelBtn.hidden = true;
             prevText.hidden = false;
