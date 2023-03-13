@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    display: block;
+}
+
+/* header  */
+header {
+    display:flex;
+    justify-content:center;
+    margin: 35px auto;
+}
+.container {
+    margin: 0 16px;
+    max-width: 1100px;
+    display: flex;
+    justify-content:space-between;
+    width:95vw;
+}
+#btn-parse{
+    width: 105px;
+    height: 44px;
+    border: 0;
+    border-radius: 8px;
+    background-color: rgba(71, 230, 177, 0.13);
+    color: rgba(53, 53, 46, 0.281);
+    font-weight: bold;
+}
+
+/* main  */
+#main {
+    display:grid;
+    justify-content: center;
+}
+#main-add {
+    justify-content: center;
+    border-color: black;
+    border-radius: 6px;
+    border: 1px dashed rgba(132, 142, 143, 0.603);
+}
+.add-file {
+    margin-bottom: 20px 0;
+    padding: 50px 0;
+    text-align: center;
+}
+.add-file_title {
+    font-size: 24px;
+    padding-bottom: 5px;
+    color: #292727;
+}
+.add-file_text {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: #474747;
+}
+
+/* btns  */
+.add-file_btns {
+    margin-top: 20px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+.add-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    color: #82b1ff;
+    font-weight: 500;
+    font-size: 14px;
+    transition:all 0.4s
+}
+.add-btn:hover {
+    background-color: #299af713;
+    transition:all 0.4s
+}
+.btn-active {
+    padding: 12px 20px;
+    background: linear-gradient(230.09deg,#50e20c,#14b9ed 92.55%);
+    color: rgba(255, 255, 255, 0.87);
+    border-radius: 6px;
+    border: 0;
+    font-weight:bold;
+    transition: all 0.4s
+}
+.btn-active:hover {
+    transition: all 0.4s;
+    opacity: .7;
+}
+
+/* input  */
+.main-input {
+    margin-top: 20px;
+    padding: 16px 12px;
+    width: 100%;
+    min-height: 160px;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid #dfdfdf;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+}
+.main-input_fullscreen {
+    min-height: 70vh;
+}
+/* footer  */
+footer {
+    text-align: center;
+    padding-top:150px;
+    margin-bottom: 16px;
+}
+.footer-text {
+    font-size: 14px;
+}
+/* перетаскивание */
+.drag-and-drop {
+    height: 100vh;
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.281);
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+.drag-and-drop:before {
+    position: absolute;
+    content: '';
+    top: -10px;
+    right: -10px;
+    left: -10px;
+    bottom: -10px;
+  }
+
+.drag-and-drop_bg {
+    width: 80%;
+    height: 80%;
+    margin:20px 20px 40px;
+    border: dashed 3px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+h3 {
+    color: #fff;
+    font-size: 36px;
+}
+.active {
+    display: none;
+}

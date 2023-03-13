@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolphin{parser}</title>
+    <link rel="shortcut icon" href="/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <img src="img/Logo.svg" alt="" class="header-logo_img">
+            <button id="btn-parse">ПАРСИТЬ</button>
+        </div>
+    </header>
+    <main id="main">
+        <div class="container" id="main-add" >
+            <div class="add-file">
+                <img src="/img/file.png" alt="file" class="add-file_img">
+                <h2 class="add-file_title">Перетащите файл с профилями</h2>
+                <p class="add-file_text">Или нажмите "Выбрать файл"</p>
+                <div class="add-file_btns">
+                    <div class="upload-file">
+                        <input type="file" name="file" class="input" hidden="hidden">
+                        <button class="add-btn btn-active" type="file">Выбрать Файл</button>
+                    </div>
+                    <button class="add-btn" id="buf-add-btn">Вставить из буфера</button>
+                    <button class="add-btn cancel" id='cancel-btn' hidden="hidden">Отменить</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <textarea class="main-input" placeholder="Введите или вставьте данные из шопов"></textarea>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer-text"> Разработано Кириллом Филипповым в качестве тестового задания на должность Frontend Dev. (Junior) </p>
+    </footer>
+    <div class="drag-and-drop active">
+        <div class="drag-and-drop_bg">
+            <div class="form">
+                <h3>Перетащите файл с профилями сюда</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
