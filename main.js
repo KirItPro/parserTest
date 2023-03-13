@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         };
     
-    function uploadFile () {
+    function uploadFile() {
         document.addEventListener('dragenter', (e) => {
             e.preventDefault();
             dragAndDrop.style.display = 'flex'
@@ -62,11 +62,11 @@ window.addEventListener('DOMContentLoaded', () => {
             cancelBtn.hidden = false;
 
             selectFile(file)
-            updateParseBtn ();
+            updateParseBtn();
         });
     };
 
-    function clickOnBtnAdd () {
+    function clickOnBtnAdd() {
         btnAnotherFile.addEventListener('click', () => {
             inputFile.click();
         });    
@@ -96,11 +96,11 @@ window.addEventListener('DOMContentLoaded', () => {
             titltFile.innerHTML = DRAG_AND_DROP;
             inputText.hidden = false;
             base64 = '';
-            updateParseBtn ();
+            updateParseBtn();
         })
     };
 
-    function addOnInputText () {
+    function addOnInputText() {
         inputText.addEventListener('input', (e) => {
             if (e.target.value.length > 0) {
                 mainBlock.style.display = 'none';
@@ -109,18 +109,18 @@ window.addEventListener('DOMContentLoaded', () => {
                 mainBlock.style.display = 'block';
                 inputText.classList.remove('main-input_fullscreen');
             }
-            updateParseBtn ();
+            updateParseBtn();
         });
         
     };
 
-    function pasteFromBuffer () {
+    function pasteFromBuffer() {
         navigator.clipboard.readText().then(text => {
             inputText.value = text;
             mainBlock.style.display = 'none';
             inputText.classList.add('main-input_fullscreen');
             inputText.focus();
-            updateParseBtn ();
+            updateParseBtn();
         })
     };
 
@@ -135,7 +135,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         reader.addEventListener('load', () => {
             base64 = getBase64FromString(reader.result);
-            updateParseBtn ();
+            updateParseBtn();
         });            
     };
 
@@ -143,10 +143,10 @@ window.addEventListener('DOMContentLoaded', () => {
         console.log('Data for parsing: ', base64 || inputText.value);
     };
 
-    updateParseBtn ();
-    addOnInputText ();
-    uploadFile ();
-    clickOnBtnAdd ();
+    updateParseBtn();
+    addOnInputText();
+    uploadFile();
+    clickOnBtnAdd();
     cancel();
     changeOrAddFile();
     bufferBtn.addEventListener('click', pasteFromBuffer);
