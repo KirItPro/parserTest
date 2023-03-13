@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
         mainBlock = document.querySelector('#main-add'),
         parseDataBtn = document.querySelector('#btn-parse');
 
-    function updateParseBtn () {
+    function updateParseBtn() {
             if (base64 || inputText.value) {
                 parseDataBtn.classList.add('btn-active');
                 parseDataBtn.removeAttribute('disabled')
