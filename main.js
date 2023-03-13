@@ -102,7 +102,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function addOnInputText () {
         inputText.addEventListener('input', (e) => {
-            if (e.target.value.length > 1) {
+            if (e.target.value.length > 0) {
                 mainBlock.style.display = 'none';
                 inputText.classList.add('main-input_fullscreen');
             } else {
