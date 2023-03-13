@@ -1,5 +1,5 @@
-const DOCUMENT_IMG = "/img/file.png",
-    DOCUMENT_IMG_COLORED = "/img/file-active.png",
+const DOCUMENT_IMG = "img/file.png",
+    DOCUMENT_IMG_COLORED = "img/file-active.png",
     ADD_FILE_ANOTHER = 'Выбрать другой Файл',
     ADD_FILE = 'Выбрать Файл',
     DRAG_AND_DROP = 'Перетащите файл с профилями';
