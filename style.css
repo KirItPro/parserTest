@@ -109,6 +109,7 @@ header {
 }
 .main-input_fullscreen {
     min-height: 70vh;
+    align-items: center;
 }
 /* footer  */
 footer {
