@@ -5,7 +5,6 @@ const DOCUMENT_IMG = "img/file.png",
     DRAG_AND_DROP = 'Перетащите файл с профилями';
 
 window.addEventListener('DOMContentLoaded', () => {
-    let fileName = '';
     let base64 = '';
     const dragAndDrop = document.querySelector('.drag-and-drop'),
         pushBlock = document.querySelector('.add-file'),
@@ -51,11 +50,9 @@ window.addEventListener('DOMContentLoaded', () => {
             parseDataBtn.classList.add('btn-active');
             
             const file = e.dataTransfer?.files?.[0];
-
-            fileName = file.name;
             inputText.hidden = true;
             prevText.hidden = true;
-            titltFile.innerHTML = `${fileName}`;
+            titltFile.innerHTML = file.name;
             btnAnotherFile.innerHTML = ADD_FILE_ANOTHER;
             img.setAttribute('src', DOCUMENT_IMG_COLORED);
             bufferBtn.hidden = true;
@@ -64,26 +61,25 @@ window.addEventListener('DOMContentLoaded', () => {
             selectFile(file)
             updateParseBtn();
         });
+
+        inputFile.addEventListener('change', (e) => {
+            titltFile.innerHTML = e.target.files?.[0].name;
+            inputText.hidden = true;
+            prevText.hidden = true;
+            bufferBtn.hidden = true;
+            cancelBtn.hidden = false;
+            img.setAttribute('src', DOCUMENT_IMG_COLORED)
+            btnAnotherFile.innerHTML = ADD_FILE_ANOTHER;
+            parseDataBtn.classList.add('btn-active');
+            selectFile(e.target.files?.[0]);
+            console.log(e.target.files?.[0].name);
+        })
     };
 
     function clickOnBtnAdd() {
         btnAnotherFile.addEventListener('click', () => {
             inputFile.click();
         });    
-    };
-
-    function changeOrAddFile() {
-        inputFile.addEventListener('change', function(e) {
-            fileName = this.files[0].name;
-            inputText.hidden = true;
-            prevText.hidden = true;
-            bufferBtn.hidden = true;
-            cancelBtn.hidden = false;
-            titltFile.innerHTML = `${fileName}`;
-            img.setAttribute('src', DOCUMENT_IMG_COLORED)
-            btnAnotherFile.innerHTML = ADD_FILE_ANOTHER;
-            parseDataBtn.classList.add('btn-active');
-        });
     };
 
     function cancel() {
@@ -148,7 +144,6 @@ window.addEventListener('DOMContentLoaded', () => {
     uploadFile();
     clickOnBtnAdd();
     cancel();
-    changeOrAddFile();
     bufferBtn.addEventListener('click', pasteFromBuffer);
     parseDataBtn.addEventListener('click', sendData);
 })
