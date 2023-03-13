@@ -108,7 +108,7 @@ header {
     font-family: 'Roboto', sans-serif;
 }
 .main-input_fullscreen {
-    min-height: 70vh;
+    min-height: 65vh;
     align-items: center;
 }
 /* footer  */
