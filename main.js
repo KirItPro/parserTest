@@ -125,7 +125,7 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     function getBase64FromString(str) {
-        const base64Index = str.indexOf('base64;');
+        const base64Index = str.indexOf('base64,');
         return str.slice(base64Index + 7);
     };
 
